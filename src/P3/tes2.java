@@ -1,6 +1,6 @@
 package P3;
 
-public class tes2a { 
+public class tes2 { 
 	
 		public static void main(String[] args) {
 			StrukturList list = new StrukturList ();

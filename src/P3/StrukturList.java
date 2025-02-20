@@ -7,7 +7,7 @@ package P3;
 
     // Fungsi isEmpty() yang sesuai dengan instruksi: mengembalikan true jika HEAD tidak null
     public boolean isEmpty() {
-        return HEAD != null; // Jika HEAD ada (list tidak kosong), return true
+        return HEAD == null; // Jika HEAD ada (list tidak kosong), return true
     }
 
     // Fungsi untuk menambahkan elemen di akhir list (addTail)
@@ -28,18 +28,7 @@ package P3;
     }
 
     // Fungsi untuk menampilkan isi list
-    public void display() {
-        if (!isEmpty()) { // Perubahan di sini agar sesuai dengan definisi baru
-            System.out.println("List kosong");
-            return;
-        }
-        Node temp = HEAD;
-        while (temp != null) {
-            System.out.print(temp.getData() + " -> ");
-            temp = temp.getNext();
-        }
-        System.out.println("null");
-    }
+  
     public void addHead (int data) {
     	Node newNode = new Node (data);
     	if (isEmpty()) {
@@ -49,6 +38,19 @@ package P3;
     		newNode.setNext(HEAD);
     		HEAD = newNode; 
     	}
+    }
+    
+    public void display() {
+        if (isEmpty()) { // Perubahan di sini agar sesuai dengan definisi baru
+            System.out.println("List kosong");
+            return;
+        }
+        Node temp = HEAD;
+        while (temp != null) {
+            System.out.print(temp.getData() + " -> ");
+            temp = temp.getNext();
+        }
+        System.out.println("null");
     }
 } 
  
